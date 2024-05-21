@@ -1,0 +1,53 @@
+<header>
+  <div class="container">
+    <div class="nav">
+      <div class="logo">
+        <a href="/">
+          <img
+            src="{{ url_for('static', filename='images/logo/intellibra-logo.png') }}"
+            alt="logo"
+          />
+        </a>
+      </div>
+      <nav>
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li>
+              <a href="/" class="nav-link">Home</a>
+            </li>
+            <li>
+              <a href="#how-works" class="nav-link">Intellibra</a>
+            </li>
+            <li><a href="#features" class="nav-link">Features</a></li>
+            <li><a href="#pricing" class="nav-link">Testimonials</a></li>
+
+            <!-- <li><a href="#pricing" class="nav-link">Pricing</a></li> -->
+            <li>
+              <a href="blog.html" class="nav-link">Stories</a>
+            </li>
+
+            <li class="btn-sign-up">
+              <a href=" " data-bs-toggle="modal" data-bs-target="#existingUser"
+                >Sign Up</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="nav-mobile-menu">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </div>
+      </nav>
+      <div class="nav-button">
+        <button
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#existingUser"
+        >
+          Order
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

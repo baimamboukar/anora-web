@@ -1,0 +1,20 @@
+{
+  "name": "Intellibra",
+  "short_name": "Intellibra",
+  "description": "Empower yourself with IntelliBra, the innovative smart bra for convenient and early breast cancer detection at home. Take control of your health, one scan at a time.",
+  "icons": [
+    {
+      "src": "images/icons/icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/icons/icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "theme_color": "#DA150F",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
