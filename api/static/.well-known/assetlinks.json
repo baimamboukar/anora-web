@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "org.xenora.anora",
+      "sha256_cert_fingerprints": [
+        "08:D9:66:4B:CD:E6:C1:87:1C:01:46:D2:5D:11:F9:CB:83:BC:C1:33:A4:A2:1A:11:7F:AA:35:4D:41:6D:47:E1"
+      ]
+    }
+  }
+]

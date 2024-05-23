@@ -1,6 +1,6 @@
-"""intellibra API BACKEND"""
+"""ANORA API BACKEND"""
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request, send_from_directory
 
 app = Flask(__name__)
 
@@ -8,63 +8,25 @@ app = Flask(__name__)
 @app.route('/')
 def intellibra():
     """--Returns index.html--"""
-    testimonials = {
-        "testifyers": [
-            {
-                "index": "1",
-                "image": "testimonial-1.jpg"
-            },
-            {
-                "index": "2",
-                "image": "testimonial-2.jpg"
-            },
-            {
-                "index": "3",
-                "image": "testimonial-3.jpg"
-            },
-            {
-                "index": "4",
-                "image": "testimonial-4.jpg"
-            },
-            {
-                "index": "5",
-                "image": "testimonial-5.jpg"
-            },
-            {
-                "index": "6",
-                "image": "testimonial-6.jpg"
-            },
-            {
-                "index": "7",
-                "image": "testimonial-7.jpg"
-            },
-        ],
-        "testimonies": [
-            {
-                "avatar": "testimonial-1_s1.jpg",
-                "name": "John Doe",
-                "title": "UX designer",
-                "testimony": "I have been using intellibra for a while now and I must say it has been a great experience. I have been able to learn a lot and improve my skills. I would recommend it to anyone who wants to learn and improve their skills.",
-            },   {
-                "avatar": "testimonial-1_s1.jpg",
-                "name": "John Doe",
-                "title": "UX designer",
-                "testimony": "I have been using intellibra for a while now and I must say it has been a great experience. I have been able to learn a lot and improve my skills. I would recommend it to anyone who wants to learn and improve their skills.",
-            },   {
-                "avatar": "testimonial-1_s1.jpg",
-                "name": "John Doe",
-                "title": "UX designer",
-                "testimony": "I have been using intellibra for a while now and I must say it has been a great experience. I have been able to learn a lot and improve my skills. I would recommend it to anyone who wants to learn and improve their skills.",
-            },
-            {
-                "avatar": "testimonial-1_s1.jpg",
-                "name": "John Doe",
-                "title": "UX designer",
-                "testimony": "I have been using intellibra for a while now and I must say it has been a great experience. I have been able to learn a lot and improve my skills. I would recommend it to anyone who wants to learn and improve their skills.",
-            },
-        ]
-    }
-    return render_template('index.html', testimonials=testimonials)
+    return render_template('invitation.html')
+
+
+@app.route('/.well-known/<path:filename>')
+def well_known(filename):
+    return send_from_directory('static/.well-known', filename)
+
+
+@app.route('/invitation')
+def invitation():
+    """--Returns invitation.html with parsed invitation data--"""
+    # Get the query parameters from the URL and parse them into a dictionary
+    invitation_params = request.args.to_dict()
+
+    # Convert the dictionary to a JSON string if needed (for example, for easy debugging)
+    # You can also use `json.dumps(invitation_params)` if you need a JSON string
+    invitation = str(invitation_params)
+
+    return render_template('invitation.html', invite=invitation)
 
 
 if __name__ == "__main__":
