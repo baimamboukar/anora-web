@@ -1,0 +1,54 @@
+/**
+ * Title
+ */
+
+.tm-sectiontitle {
+    margin-bottom: 40px;
+
+    h2 {
+        font-weight: 500;
+        margin-top: -8px;
+    }
+
+    &-divider {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: "";
+            background-image: url(../images/title-shape.png);
+            display: inline-block;
+            width: 70px;
+            height: 7px;
+            position: absolute;
+            top: 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+            margin-top: -4px;
+        }
+
+        &:before {
+            left: auto;
+            right: 125%;
+        }
+
+        &::after {
+            right: auto;
+            left: 125%;
+        }
+
+        i {
+            display: inline-block;
+            transform: rotate(45deg);
+            color: $color-theme;
+            font-size: 20px;
+            height: 25px;
+            width: 25px;
+            line-height: 25px;
+        }
+    }
+}

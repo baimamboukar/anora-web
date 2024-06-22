@@ -1,0 +1,318 @@
+/**
+ * Button
+ */
+
+.tm-button,
+a.tm-button,
+button.tm-button {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 35px;
+    display: inline-block;
+    overflow: hidden;
+    color: #ffffff;
+    background: $color-theme;
+    position: relative;
+    z-index: 1;
+    vertical-align: middle;
+    font-family: $ff-heading;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    border: 0;
+    border-radius: 4px;
+    transition: all 0.4s ease-in-out 0s;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 101%;
+        height: 100%;
+        @include gradient-bg(a, 90);
+        z-index: 2;
+        opacity: 1;
+        transition: all 0.4s ease-in-out 0s;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 101%;
+        height: 100%;
+        @include gradient-bg(a, 270);
+        z-index: 2;
+        opacity: 0;
+        transition: all 0.4s ease-in-out 0s;
+    }
+
+    i,
+    span {
+        position: relative;
+        z-index: 3;
+        vertical-align: baseline;
+    }
+
+    i {
+        font-size: 22px;
+        margin-right: 8px;
+    }
+
+    &:hover {
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    &.tm-button-lg {
+        height: 55px;
+        line-height: 55px;
+
+        i {
+            font-size: 24px;
+        }
+    }
+
+    &.tm-button-sm {
+        height: 45px;
+        line-height: 45px;
+        font-size: 16px;
+
+        i {
+            font-size: 20px;
+        }
+    }
+
+    &.tm-button-white {
+        background: #ffffff;
+        color: $color-theme;
+
+        &::before {
+            display: none;
+        }
+
+        &:hover {
+            color: #ffffff;
+        }
+
+        &.tm-button-transparent {
+            border: 1px solid #ffffff;
+            background: transparent;
+            color: #ffffff;
+
+            &::after {
+                display: none;
+            }
+
+            &:hover {
+                background: #ffffff;
+                color: $color-theme;
+            }
+        }
+    }
+
+    &.tm-button-dark {
+        background: $color-heading;
+        color: #ffffff;
+
+        &::before {
+            display: none;
+        }
+
+        &.tm-button-transparent {
+            border: 1px solid $color-heading;
+            background: transparent;
+            color: $color-heading;
+
+            &::after {
+                display: none;
+            }
+
+            &:hover {
+                background: $color-heading;
+                color: #ffffff;
+            }
+        }
+    }
+
+    @media #{$layout-notebook} {
+        padding: 0 25px;
+
+        &.tm-button-lg {
+            height: 50px;
+            line-height: 50px;
+            padding: 0 25px;
+        }
+    }
+
+    @media #{$layout-tablet} {
+        padding: 0 25px;
+
+        &.tm-button-lg {
+            height: 50px;
+            line-height: 50px;
+            padding: 0 25px;
+        }
+    }
+
+    @media #{$layout-mobile-lg} {
+        padding: 0 25px;
+        height: 45px;
+        line-height: 45px;
+
+        &.tm-button-lg {
+            height: 50px;
+            line-height: 50px;
+            padding: 0 25px;
+        }
+    }
+}
+
+.tm-buttongroup {
+    margin-left: -25px;
+    margin-top: -10px;
+    font-size: 0;
+
+    .tm-button {
+        margin-left: 25px;
+        margin-top: 10px;
+    }
+}
+
+/* Read More Button */
+.tm-readmore,
+a.tm-readmore,
+button.tm-readmore {
+    display: inline-block;
+    color: $color-body;
+    font-weight: 700;
+
+    i {
+        font-size: 12px;
+        padding-left: 0;
+        transition: padding 0.3s ease-in-out 0s;
+    }
+
+    &:hover {
+        color: $color-theme;
+
+        i {
+            padding-left: 5px;
+        }
+    }
+}
+
+
+/* Video Button */
+.tm-videobutton,
+a.tm-videobutton,
+button.tm-videobutton {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+
+    a {
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 999px;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        height: 100%;
+        width: 100%;
+        margin-left: -30px;
+        margin-top: -30px;
+        border-radius: 999px;
+    }
+
+    &::before {
+        background: rgba(#ffffff, 0.7);
+        z-index: -1;
+        animation: tmGrowShrink 1.2s ease-in-out 0s infinite both;
+    }
+
+    &::after {
+        background: rgba($color-theme, 0.7);
+        z-index: -2;
+        animation: tmGrowShrink 1.2s ease-in-out 0.3s infinite both;
+    }
+
+    span {
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
+        text-align: center;
+        background: #ffffff;
+        border-radius: 999px;
+        color: $color-theme;
+        transition: all 0.3s ease-in-out 0s;
+
+        i {
+            font-size: 26px;
+            vertical-align: middle;
+            padding-left: 4px;
+        }
+    }
+
+    &:hover {
+        span {
+            background: $color-theme;
+            color: #ffffff;
+        }
+    }
+
+    &.tm-videobutton-lg {
+
+        &::before,
+        &::after {
+            margin-left: -40px;
+            margin-top: -40px;
+        }
+
+        span {
+            height: 80px;
+            width: 80px;
+            line-height: 80px;
+
+            i {
+                font-size: 32px;
+            }
+        }
+    }
+
+    @media #{$layout-mobile-lg} {
+        &.tm-videobutton-lg {
+
+            &::before,
+            &::after {
+                margin-left: -32.5px;
+                margin-top: -32.5px;
+            }
+
+            span {
+                height: 65px;
+                width: 65px;
+                line-height: 65px;
+
+                i {
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+}

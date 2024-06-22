@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def intellibra():
     """--Returns index.html--"""
-    return render_template('invitation.html')
+    return render_template('index.html')
 
 
 @app.route('/.well-known/<path:filename>')

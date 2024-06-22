@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Anora AI</title>
+    <meta name="description" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="apple-touch-icon" href="assets/images/favicon.png" />
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+
+    <!-- Google Font (font-family: 'Roboto', sans-serif;) -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700"
+      rel="stylesheet"
+    />
+    <!-- Google Font ('Poppins', sans-serif;) -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/plugins.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/custom.css') }}"
+    />
+  </head>
+
+  <body>
+    <!-- Preloader -->
+    <!-- <div class="tm-preloader">
+        <span class="tm-preloader-box"></span>
+        <button class="tm-button tm-button-sm tm-button-white"><span>Cancel Loader</span></button>
+    </div> -->
+    <!--// Preloader -->
+
+    <!-- Wrapper -->
+    <div id="wrapper" class="wrapper">
+      <!-- Header Area -->
+      <div class="tm-header tm-header-fixed tm-sticky-header">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-3 col-md-9 col-9">
+              <a class="tm-header-logo" href="/">
+                <img
+                  src="{{ url_for('static', filename='images/logo-white.png') }}"
+                  alt="AnoraAI logo"
+                />
+              </a>
+            </div>
+            <div class="col-lg-9 col-md-3 col-3">
+              <nav class="tm-navigation tm-header-navigation">
+                <ul>
+                  <li class="current">
+                    <a href="#tm-area-heroslider">Home</a>
+                  </li>
+                  <li><a href="#tm-area-features">Feature</a></li>
+                  <li><a href="#tm-area-screenshots">Screenshot</a></li>
+                  <li><a href="#tm-area-faq">FAQs</a></li>
+
+                  <li><a href="#footerx">Contacts</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="tm-mobilenav"></div>
+        </div>
+      </div>
+      <!--// Header Area -->
+
+      <!-- Heroslider Area -->
+      <div id="tm-area-heroslider" class="tm-heroslider">
+        <div class="tm-heroslider-inner">
+          <img
+            src="{{ url_for('static', filename='images/heroslider-overlay-shape.png') }}"
+            alt="heroslider overlay"
+            class="tm-heroslider-ovelayshape"
+          />
+
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-xl-8 col-lg-7 order-2 order-lg-1">
+                <div class="tm-heroslider-content">
+                  <h1>Anora AI ✨</h1>
+                  <p>
+                    Make sense of your Custom Business Data Like Never Before
+                  </p>
+                  <div class="tm-buttongroup">
+                    <a
+                      href="#"
+                      class="tm-button tm-button-lg tm-button-white tm-button-transparent"
+                      ><i class="zmdi zmdi-android"></i
+                      ><span>Google Play</span></a
+                    >
+                    <a
+                      href="#"
+                      class="tm-button tm-button-lg tm-button-white tm-button-transparent"
+                      ><i class="zmdi zmdi-apple"></i
+                      ><span>IOS App Store</span></a
+                    >
+                  </div>
+                  <a href="#tm-area-features" class="tm-heroslider-scrolldown">
+                    <i class="zmdi zmdi-square-down"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-5 order-1 order-lg-2">
+                <div class="tm-heroslider-mobileshow">
+                  <img
+                    src="{{ url_for('static', filename='images/heroslider-mobile-show.png') }}"
+                    alt="Mboathoscope mobile"
+                  />
+
+                  <div class="tm-heroslider-mobileshowanim">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// Heroslider Area -->
+
+      <!-- Page Content -->
+      <main class="page-content">
+        <!-- Features Area -->
+        <div
+          id="tm-area-features"
+          class="tm-features-area tm-section tm-padding-section bg-white"
+        >
+          <div class="container">
+            <div class="row justify-content-center mt-30-reverse">
+              <!-- Single Features -->
+              <div class="col-lg-4 col-md-6 col-12 mt-30">
+                <div class="tm-feature">
+                  <span class="tm-feature-icon">
+                    <i class="flaticon-keyword"></i>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="70px"
+                      height="72px"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M52.556,54.307 C64.348,37.302 73.747,12.982 68.512,4.877 C60.795,-7.064 13.848,4.659 2.850,20.520 C2.466,21.074 2.124,21.636 1.831,22.199 C-6.854,38.889 17.104,75.968 33.774,71.638 C39.513,70.148 46.364,63.237 52.556,54.307 "
+                      />
+                    </svg>
+                  </span>
+                  <div class="tm-feature-content">
+                    <h4>Contextually Aware</h4>
+                    <p>
+                      Anora AI provides responses that are contextually
+                      relevant, adapting to user queries in real-time.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!--// Single Features -->
+
+              <!-- Single Features -->
+              <div class="col-lg-4 col-md-6 col-12 mt-30">
+                <div class="tm-feature">
+                  <span class="tm-feature-icon">
+                    <i class="flaticon-document"></i>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="70px"
+                      height="72px"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M52.556,54.307 C64.348,37.302 73.747,12.982 68.512,4.877 C60.795,-7.064 13.848,4.659 2.850,20.520 C2.466,21.074 2.124,21.636 1.831,22.199 C-6.854,38.889 17.104,75.968 33.774,71.638 C39.513,70.148 46.364,63.237 52.556,54.307 "
+                      />
+                    </svg>
+                  </span>
+                  <div class="tm-feature-content">
+                    <h4>Secured Data</h4>
+                    <p>
+                      Anora AI ensures your data is protected with top-notch
+                      security measures and compliance standards.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!--// Single Features -->
+
+              <!-- Single Features -->
+              <div class="col-lg-4 col-md-6 col-12 mt-30">
+                <div class="tm-feature">
+                  <span class="tm-feature-icon">
+                    <i class="flaticon-cover"></i>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="70px"
+                      height="72px"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M52.556,54.307 C64.348,37.302 73.747,12.982 68.512,4.877 C60.795,-7.064 13.848,4.659 2.850,20.520 C2.466,21.074 2.124,21.636 1.831,22.199 C-6.854,38.889 17.104,75.968 33.774,71.638 C39.513,70.148 46.364,63.237 52.556,54.307 "
+                      />
+                    </svg>
+                  </span>
+                  <div class="tm-feature-content">
+                    <h4>Meaningful Information</h4>
+                    <p>
+                      Anora AI delivers precise, context-aware information using
+                      advanced natural language processing and RAG technology.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!--// Single Features -->
+            </div>
+          </div>
+        </div>
+        <!--// Features Area -->
+
+        <!-- About Us Area -->
+        <div
+          id="tm-area-about"
+          class="tm-about-area tm-section tm-padding-section bg-grey"
+        >
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="tm-sectiontitle text-center">
+                  <h2>About Anora AI</h2>
+                  <span class="tm-sectiontitle-divider"
+                    ><i class="zmdi zmdi-fullscreen"></i
+                  ></span>
+                </div>
+              </div>
+            </div>
+            <div class="row align-items-center">
+              <div class="col-lg-6">
+                <div class="tm-about-image">
+                  <img
+                    class="tm-about-mobilethumb"
+                    src="{{ url_for('static', filename='images/about-mobile.png') }}"
+                    alt="about mobile"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="tm-about-content">
+                  <h4>Why Anora AI is the Choice for You</h4>
+                  <h6>
+                    Experience the power of advanced AI technology tailored for
+                    seamless interaction.
+                  </h6>
+                  <p>
+                    Anora AI revolutionizes how users interact with information,
+                    combining intuitive chatbot capabilities with contextual
+                    understanding and personalized responses.
+                  </p>
+                  <ul class="stylish-list">
+                    <li>
+                      <i class="zmdi zmdi-check"></i> Intuitive Chatbot with
+                      real-time responses.
+                    </li>
+                    <li>
+                      <i class="zmdi zmdi-check"></i> Contextual Understanding.
+                    </li>
+                    <li>
+                      <i class="zmdi zmdi-check"></i> Knowledge Base
+                      Integration.
+                    </li>
+                    <li>
+                      <i class="zmdi zmdi-check"></i> Streamline data analysis
+                      and insight extraction.
+                    </li>
+                    <li>
+                      <i class="zmdi zmdi-check"></i> Ensure uninterrupted
+                      access to essential features.
+                    </li>
+                    <li>
+                      <i class="zmdi zmdi-check"></i> Protect your data with
+                      advanced security measures.
+                    </li>
+                    <li>
+                      <i class="zmdi zmdi-check"></i> Communicate via text,
+                      voice, or images for versatile engagement.
+                    </li>
+                    <li>
+                      <i class="zmdi zmdi-check"></i> Access the latest
+                      information instantly for informed decisions.
+                    </li>
+                  </ul>
+                  <a href="#" class="tm-button"><span>Read More</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--// About Us Area -->
+
+        <!-- Services Area -->
+        <div
+          id="tm-area-services"
+          class="tm-services-area tm-section tm-padding-section bg-white"
+        >
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="tm-sectiontitle text-center">
+                  <h2>Advanced Features</h2>
+                  <span class="tm-sectiontitle-divider"
+                    ><i class="zmdi zmdi-fullscreen"></i
+                  ></span>
+                </div>
+              </div>
+            </div>
+            <div class="row align-items-center">
+              <div class="col-lg-6">
+                <div class="row mt-40-reverse">
+                  <!-- Single Features -->
+                  <div class="col-lg-12 col-md-6 col-12 mt-40">
+                    <div class="tm-service">
+                      <span class="tm-service-icon">
+                        <i class="flaticon-friendship"></i>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          width="70px"
+                          height="72px"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M52.556,54.307 C64.348,37.302 73.747,12.982 68.512,4.877 C60.795,-7.064 13.848,4.659 2.850,20.520 C2.466,21.074 2.124,21.636 1.831,22.199 C-6.854,38.889 17.104,75.968 33.774,71.638 C39.513,70.148 46.364,63.237 52.556,54.307"
+                          />
+                        </svg>
+                      </span>
+                      <div class="tm-service-content">
+                        <h4>Enhanced User Interaction</h4>
+                        <p>
+                          Elevate user engagement with seamless communication
+                          and real-time responses.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!--// Single Features -->
+
+                  <!-- Single Features -->
+                  <div class="col-lg-12 col-md-6 col-12 mt-40">
+                    <div class="tm-service">
+                      <span class="tm-service-icon">
+                        <i class="flaticon-support"></i>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          width="70px"
+                          height="72px"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M52.556,54.307 C64.348,37.302 73.747,12.982 68.512,4.877 C60.795,-7.064 13.848,4.659 2.850,20.520 C2.466,21.074 2.124,21.636 1.831,22.199 C-6.854,38.889 17.104,75.968 33.774,71.638 C39.513,70.148 46.364,63.237 52.556,54.307"
+                          />
+                        </svg>
+                      </span>
+                      <div class="tm-service-content">
+                        <h4>Intelligent Data Analysis</h4>
+                        <p>
+                          Utilize advanced AI RAG for accurate data analysis and
+                          insights extraction.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!--// Single Features -->
+
+                  <!-- Single Features -->
+                  <div class="col-lg-12 col-md-6 col-12 mt-40">
+                    <div class="tm-service">
+                      <span class="tm-service-icon">
+                        <i class="flaticon-team"></i>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          width="70px"
+                          height="72px"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M52.556,54.307 C64.348,37.302 73.747,12.982 68.512,4.877 C60.795,-7.064 13.848,4.659 2.850,20.520 C2.466,21.074 2.124,21.636 1.831,22.199 C-6.854,38.889 17.104,75.968 33.774,71.638 C39.513,70.148 46.364,63.237 52.556,54.307"
+                          />
+                        </svg>
+                      </span>
+                      <div class="tm-service-content">
+                        <h4>Knowlege Bases Integration</h4>
+                        <p>
+                          Securely manage and access knowledge bases records
+                          with comprehensive privacy measures.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!--// Single Features -->
+
+                  <!-- Single Features -->
+                  <div class="col-lg-12 col-md-6 col-12 mt-40">
+                    <div class="tm-service">
+                      <span class="tm-service-icon">
+                        <i class="flaticon-hourglass"></i>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          width="70px"
+                          height="72px"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M52.556,54.307 C64.348,37.302 73.747,12.982 68.512,4.877 C60.795,-7.064 13.848,4.659 2.850,20.520 C2.466,21.074 2.124,21.636 1.831,22.199 C-6.854,38.889 17.104,75.968 33.774,71.638 C39.513,70.148 46.364,63.237 52.556,54.307"
+                          />
+                        </svg>
+                      </span>
+                      <div class="tm-service-content">
+                        <h4>Robust Security Measures</h4>
+                        <p>
+                          Ensure data security with advanced encryption and
+                          compliance standards.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!--// Single Features -->
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="tm-service-image">
+                  <div class="tm-service-image-1 is-visible">
+                    <img
+                      src="{{ url_for('static', filename='images/service-image-1.png') }}"
+                      alt="Mboathoscope mobile"
+                    />
+                  </div>
+                  <div class="tm-service-image-2">
+                    <img
+                      src="{{ url_for('static', filename='images/service-image-2.png') }}"
+                      alt="Mboathoscope mobile"
+                    />
+                  </div>
+                  <div class="tm-service-mobileshowanim">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--// Services Area -->
+
+        <!-- Video & Funfact Area -->
+        <div
+          id="tm-area-video"
+          class="tm-video-funfact-area tm-section tm-padding-section bg-grey"
+        >
+          <div class="tm-video-funfact-bgshape">
+            <img
+              src="{{ url_for('static', filename='images/funfact-bg-shape.png') }}"
+              alt="bg shape"
+            />
+          </div>
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6">
+                <div class="tm-videobox tm-videobox-circle tm-funfact-videobox">
+                  <img
+                    src="{{ url_for('static', filename='images/video-thumb-image-1.jpg') }}"
+                    alt="Mboathoscope video image"
+                  />
+
+                  <a
+                    href="https://www.youtube.com/watch?v=mHUOCxVT5ro"
+                    data-fancybox="video"
+                    ><i class="flaticon-play-button"></i
+                  ></a>
+                  <span class="tm-videobox-roundicon"></span>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="row tm-funfact-wrapper">
+                  <!-- Single Funfact -->
+                  <div
+                    class="col-lg-6 col-md-6 col-sm-6 col-12 tm-funfact-masonryitem"
+                  >
+                    <div class="tm-funfact text-center">
+                      <span class="tm-funfact-icon">
+                        <i class="flaticon-inbox"></i>
+                      </span>
+                      <div class="tm-funfact-content">
+                        <span class="tm-funfact-number"
+                          ><span class="odometer" data-count-to="001"></span
+                          >K+</span
+                        >
+                        <h4>App Download</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <!--// Single Funfact -->
+
+                  <!-- Single Funfact -->
+                  <div
+                    class="col-lg-6 col-md-6 col-sm-6 col-12 tm-funfact-masonryitem"
+                  >
+                    <div class="tm-funfact text-center">
+                      <span class="tm-funfact-icon">
+                        <i class="flaticon-goal"></i>
+                      </span>
+                      <div class="tm-funfact-content">
+                        <span class="tm-funfact-number"
+                          ><span class="odometer" data-count-to="001"></span
+                          >K+</span
+                        >
+                        <h4>Total Achivement</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <!--// Single Funfact -->
+
+                  <!-- Single Funfact -->
+                  <div
+                    class="col-lg-6 col-md-6 col-sm-6 col-12 tm-funfact-masonryitem"
+                  >
+                    <div class="tm-funfact text-center">
+                      <span class="tm-funfact-icon">
+                        <i class="flaticon-team-1"></i>
+                      </span>
+                      <div class="tm-funfact-content">
+                        <span class="tm-funfact-number"
+                          ><span class="odometer" data-count-to="50"></span
+                        ></span>
+                        <h4>Daily Visitors</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <!--// Single Funfact -->
+
+                  <!-- Single Funfact -->
+                  <div
+                    class="col-lg-6 col-md-6 col-sm-6 col-12 tm-funfact-masonryitem"
+                  >
+                    <div class="tm-funfact text-center">
+                      <span class="tm-funfact-icon">
+                        <i class="flaticon-review"></i>
+                      </span>
+                      <div class="tm-funfact-content">
+                        <span class="tm-funfact-number"
+                          ><span class="odometer" data-count-to="10"></span
+                        ></span>
+                        <h4>Positive Reviews</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <!--// Single Funfact -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--// Video & Funfact Area -->
+
+        <!-- Screenshot Slideshow Area -->
+        <div
+          id="tm-area-screenshots"
+          class="tm-screenshot-area tm-section tm-padding-section bg-white"
+        >
+          <div class="tm-screenshots-bgshape">
+            <img
+              src="{{ url_for('static', filename='images/screenshot-background-shape.png') }}"
+              alt="screenshot background shape"
+            />
+          </div>
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="tm-sectiontitle text-center">
+                  <h2>App Screenshot</h2>
+                  <span class="tm-sectiontitle-divider"
+                    ><i class="zmdi zmdi-fullscreen"></i
+                  ></span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="tm-screenshots">
+                  <div class="tm-screenshots-slider tm-slider-arrow">
+                    <div class="tm-screenshots-single">
+                      <img
+                        src="{{ url_for('static', filename='images/screenshot-1.png') }}"
+                        alt="Mboathoscope screenshot"
+                      />
+                    </div>
+                    <div class="tm-screenshots-single">
+                      <img
+                        src="{{ url_for('static', filename='images/screenshot-2.png') }}"
+                        alt="Mboathoscope screenshot"
+                      />
+                    </div>
+                    <div class="tm-screenshots-single">
+                      <img
+                        src="{{ url_for('static', filename='images/screenshot-3.png') }}"
+                        alt="Mboathoscope screenshot"
+                      />
+                    </div>
+                    <div class="tm-screenshots-single">
+                      <img
+                        src="{{ url_for('static', filename='images/screenshot-4.jpg') }}"
+                        alt="Mboathoscope screenshot"
+                      />
+                    </div>
+                    <div class="tm-screenshots-single">
+                      <img
+                        src="{{ url_for('static', filename='images/screenshot-5.jpg') }}"
+                        alt="Mboathoscope screenshot"
+                      />
+                    </div>
+                    <div class="tm-screenshots-single">
+                      <img
+                        src="{{ url_for('static', filename='images/screenshot-1.jpg') }}"
+                        alt="Mboathoscope screenshot"
+                      />
+                    </div>
+                    <div class="tm-screenshots-single">
+                      <img
+                        src="{{ url_for('static', filename='images/screenshot-2.jpg') }}"
+                        alt="Mboathoscope screenshot"
+                      />
+                    </div>
+                    <div class="tm-screenshots-single">
+                      <img
+                        src="{{ url_for('static', filename='images/screenshot-3.jpg') }}"
+                        alt="Mboathoscope screenshot"
+                      />
+                    </div>
+                    <div class="tm-screenshots-single">
+                      <img
+                        src="{{ url_for('static', filename='images/screenshot-4.jpg') }}"
+                        alt="Mboathoscope screenshot"
+                      />
+                    </div>
+                    <div class="tm-screenshots-single">
+                      <img
+                        src="{{ url_for('static', filename='images/screenshot-5.jpg') }}"
+                        alt="Mboathoscope screenshot"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--// Screenshot Slideshow Area -->
+
+        <!--// Team Member Area -->
+
+        <!-- Downlaod Area -->
+        <div
+          id="tm-area-download"
+          class="tm-downlaod-area tm-section tm-padding-section bg-gradient"
+        >
+          <div class="tm-download-bgshape">
+            <img
+              src="{{ url_for('static', filename='images/download-bgshape.png') }}"
+              alt="bg shape"
+            />
+          </div>
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6">
+                <div class="tm-download-content">
+                  <img
+                    src="{{ url_for('static', filename='images/logo-white.png') }}"
+                    alt="Mboathoscope"
+                  />
+
+                  <h4>Get The App</h4>
+                  <h3>It’s Free to Download for Everyone</h3>
+                  <div class="tm-buttongroup">
+                    <a href="#" class="tm-button tm-button-lg tm-button-white"
+                      ><i class="zmdi zmdi-android"></i
+                      ><span>Google Play</span></a
+                    >
+                    <a
+                      href="#"
+                      class="tm-button tm-button-lg tm-button-white tm-button-transparent"
+                      ><i class="zmdi zmdi-apple"></i
+                      ><span>IOS App Store</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="tm-download-graph text-center">
+                  <h5>Download Statics (Last 6 month)</h5>
+                  <canvas id="downloadgraph" height="185"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--// Downlaod Area -->
+
+        <!-- Contact Form -->
+        <div class="google-map-area bg-white">
+          <div id="google-map" class="tm-google-map"></div>
+        </div>
+        <!--// Contact Form -->
+        <!-- Frequently Ask Question -->
+        <div
+          id="tm-area-faq"
+          class="tm-faq-area tm-section tm-padding-section bg-white"
+        >
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="tm-sectiontitle text-center">
+                  <h2>Frequently Asked Questions</h2>
+                  <span class="tm-sectiontitle-divider"
+                    ><i class="zmdi zmdi-fullscreen"></i
+                  ></span>
+                </div>
+              </div>
+            </div>
+            <div class="row align-items-center">
+              <div class="col-lg-5">
+                <div class="tm-faq-image">
+                  <img
+                    src="{{ url_for('static', filename='images/faq-image.png') }}"
+                    alt="faq image"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <!-- Accordion Wrapper -->
+                <div id="tm-accordion1" class="tm-accordion">
+                  <div class="card">
+                    <div class="card-header" id="tm-accordion1-heading1">
+                      <h5 class="mb-0">
+                        <button
+                          class="btn btn-link"
+                          data-toggle="collapse"
+                          data-target="#tm-accordion1-collapse1"
+                          aria-expanded="true"
+                          aria-controls="tm-accordion1-collapse1"
+                        >
+                          How can I download the app ?
+                        </button>
+                      </h5>
+                    </div>
+                    <div
+                      id="tm-accordion1-collapse1"
+                      class="collapse show"
+                      aria-labelledby="tm-accordion1-heading1"
+                      data-parent="#tm-accordion1"
+                    >
+                      <div class="card-body">
+                        <p>
+                          An App is a term to describe a web-based program.
+                          These web-based or mobile applications perform a
+                          specific task for the user. website where one can
+                          download these small programs for use on mobile
+                          devices such as a Smart phone.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="tm-accordion1-heading2">
+                      <h5 class="mb-0">
+                        <button
+                          class="btn btn-link collapsed"
+                          data-toggle="collapse"
+                          data-target="#tm-accordion1-collapse2"
+                          aria-expanded="false"
+                          aria-controls="tm-accordion1-collapse2"
+                        >
+                          How can I install the app ?
+                        </button>
+                      </h5>
+                    </div>
+                    <div
+                      id="tm-accordion1-collapse2"
+                      class="collapse"
+                      aria-labelledby="tm-accordion1-heading2"
+                      data-parent="#tm-accordion1"
+                    >
+                      <div class="card-body">
+                        <p>
+                          An App is a term to describe a web-based program.
+                          These web-based or mobile applications perform a
+                          specific task for the user. website where one can
+                          download these small programs for use on mobile
+                          devices such as a Smart phone.
+                        </p>
+                        <ul>
+                          <li>
+                            Libero exercitationem omnis blanditiis ea quo et
+                            rem.
+                          </li>
+                          <li>
+                            Beatae veritatis aliquid vel quisquam saepe
+                            incidunt.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="tm-accordion1-heading3">
+                      <h5 class="mb-0">
+                        <button
+                          class="btn btn-link collapsed"
+                          data-toggle="collapse"
+                          data-target="#tm-accordion1-collapse3"
+                          aria-expanded="false"
+                          aria-controls="tm-accordion1-collapse3"
+                        >
+                          How can I active all the features ?
+                        </button>
+                      </h5>
+                    </div>
+                    <div
+                      id="tm-accordion1-collapse3"
+                      class="collapse"
+                      aria-labelledby="tm-accordion1-heading3"
+                      data-parent="#tm-accordion1"
+                    >
+                      <div class="card-body">
+                        <p>
+                          An App is a term to describe a web-based program.
+                          These web-based or mobile applications perform a
+                          specific task for the user. website where one can
+                          download these small programs for use on mobile
+                          devices such as a Smart phone.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="tm-accordion1-heading4">
+                      <h5 class="mb-0">
+                        <button
+                          class="btn btn-link collapsed"
+                          data-toggle="collapse"
+                          data-target="#tm-accordion1-collapse4"
+                          aria-expanded="false"
+                          aria-controls="tm-accordion1-collapse4"
+                        >
+                          What platform should we target?
+                        </button>
+                      </h5>
+                    </div>
+                    <div
+                      id="tm-accordion1-collapse4"
+                      class="collapse"
+                      aria-labelledby="tm-accordion1-heading4"
+                      data-parent="#tm-accordion1"
+                    >
+                      <div class="card-body">
+                        <p>
+                          An App is a term to describe a web-based program.
+                          These web-based or mobile applications perform a
+                          specific task for the user. website where one can
+                          download these small programs for use on mobile
+                          devices such as a Smart phone.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="tm-accordion1-heading5">
+                      <h5 class="mb-0">
+                        <button
+                          class="btn btn-link collapsed"
+                          data-toggle="collapse"
+                          data-target="#tm-accordion1-collapse5"
+                          aria-expanded="false"
+                          aria-controls="tm-accordion1-collapse5"
+                        >
+                          Do I have to buy the Mobile App?
+                        </button>
+                      </h5>
+                    </div>
+                    <div
+                      id="tm-accordion1-collapse5"
+                      class="collapse"
+                      aria-labelledby="tm-accordion1-heading5"
+                      data-parent="#tm-accordion1"
+                    >
+                      <div class="card-body">
+                        <p>
+                          An App is a term to describe a web-based program.
+                          These web-based or mobile applications perform a
+                          specific task for the user. website where one can
+                          download these small programs for use on mobile
+                          devices such as a Smart phone.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="tm-accordion1-heading6">
+                      <h5 class="mb-0">
+                        <button
+                          class="btn btn-link collapsed"
+                          data-toggle="collapse"
+                          data-target="#tm-accordion1-collapse6"
+                          aria-expanded="false"
+                          aria-controls="tm-accordion1-collapse6"
+                        >
+                          Will I need to test my app fully?
+                        </button>
+                      </h5>
+                    </div>
+                    <div
+                      id="tm-accordion1-collapse6"
+                      class="collapse"
+                      aria-labelledby="tm-accordion1-heading6"
+                      data-parent="#tm-accordion1"
+                    >
+                      <div class="card-body">
+                        <p>
+                          An App is a term to describe a web-based program.
+                          These web-based or mobile applications perform a
+                          specific task for the user. website where one can
+                          download these small programs for use on mobile
+                          devices such as a Smart phone.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--// Accordion Wrapper -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--// Frequently Ask Question -->
+      </main>
+      <!--// Page Content -->
+
+      <!-- Footer Area -->
+      <div class="tm-footer bg-gradient" id="footerx">
+        <div class="tm-footer-bgshape">
+          <img
+            src="{{ url_for('static', filename='images/footer-bgshape.png') }}"
+            alt="footer background shape"
+          />
+        </div>
+        <div class="container">
+          <div class="tm-footer-toparea tm-padding-section">
+            <div class="row widgets tm-footer-widgets">
+              <div class="col-xl-5 col-lg-4 col-md-6 col-12">
+                <div class="single-widget widget-info">
+                  <a href="index.html" class="widget-info-logo">
+                    <img
+                      src="{{ url_for('static', filename='images/logo-white.png') }}"
+                      alt="Mboathoscope logo"
+                    />
+                  </a>
+                  <p>
+                    Make sense of your custom business data like never before
+                  </p>
+                </div>
+              </div>
+              <div class="col-xl-2 col-lg-2 col-md-6 col-12">
+                <div class="single-widget widget-quicklinks">
+                  <h5 class="widget-title">Mboalab</h5>
+                  <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Contacts</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-2 col-lg-2 col-md-6 col-12">
+                <div class="single-widget widget-quicklinks">
+                  <h5 class="widget-title">Support</h5>
+                  <ul>
+                    <li><a href="#">Help center</a></li>
+                    <li><a href="#">How it works</a></li>
+                    <li><a href="#">Terms of use</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                <div class="single-widget widget-recentpost">
+                  <h5 class="widget-title">Recent Posts</h5>
+                  <ul>
+                    <li>
+                      <div class="widget-recentpost-content">
+                        <h6>
+                          <a href="blog-details.html"
+                            >How to use Digital Stehoscopes
+                          </a>
+                        </h6>
+                        <span>November 01, 2022</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="widget-recentpost-content">
+                        <h6><a href="blog-details.html">All about RAG</a></h6>
+                        <span>June 01, 2024</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tm-footer-bottomarea">
+            <div class="row align-items-center">
+              <div class="col-md-7">
+                <p class="tm-footer-copyright">
+                  Copyright 2024 <a href="#">@baimamboukar</a>. Designed by
+                  <a href="https://github.com/baimamboukar">baimamboukar</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// Footer Area -->
+    </div>
+    <!--// Wrapper -->
+
+    <!-- Google Map -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgwgIuDRkO7HlxvpWN-vPePnGVWss5r5g"></script>
+    <script src="assets/js/google-map.js"></script> -->
+
+    <!-- Js Files -->
+    <script src="{{ url_for('static', filename='js/modernizr-3.6.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chart.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chartactive.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <!--// Js Files -->
+  </body>
+</html>

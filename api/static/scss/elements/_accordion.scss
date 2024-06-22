@@ -1,0 +1,98 @@
+/**
+ * Accordion
+ */
+
+/* Accordion Styles */
+.tm-accordion {
+
+    .card {
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+
+        &:first-child {
+            .card-header {
+                button {
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .card-header {
+        padding: 0;
+        background: transparent;
+        border: 0;
+        position: relative;
+
+        button {
+            height: auto;
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 10px 10px 10px 50px;
+            font-size: 18px;
+            font-family: $ff-heading;
+            color: $color-heading;
+            line-height: 28px;
+            font-weight: 500;
+            text-decoration: none !important;
+            border: 0;
+            position: relative;
+            white-space: inherit;
+            background: $color-grey;
+            border-radius: 100px;
+
+            &::before {
+                content: "\f2f9";
+                font-family: 'Material-Design-Iconic-Font';
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                margin-top: -14px;
+                height: 28px;
+                width: 28px;
+                line-height: 28px;
+                color: #ffffff;
+                text-align: center;
+                border-radius: 100px;
+                @include gradient-bg(a, 90);
+                transition: all 0.2s ease-in-out 0s;
+            }
+
+            &.collapsed {
+                &::before {
+                    content: "\f2f9";
+                }
+            }
+
+            &:not(.collapsed) {
+                @include gradient-bg(a, -90);
+                color: #ffffff;
+
+                &:before {
+                    content: "\f2fc";
+                    background: #ffffff;
+                    color: $color-theme;
+                }
+            }
+        }
+    }
+
+    .card-body {
+        padding: 15px 0 5px 50px;
+        position: relative;
+    }
+
+    @media #{$layout-mobile-lg} {
+        .card-header button {
+            font-size: 16px;
+        }
+    }
+}

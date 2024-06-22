@@ -1,0 +1,169 @@
+/**
+ * Pricebox
+ */
+
+.tm-pricebox-area-bgshape {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.tm-pricebox-switchbuttons {
+    font-size: 0;
+    background: #ffffff;
+    display: inline-block;
+    box-shadow: $shadow;
+    border-radius: 50px;
+
+    button {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 500;
+        border: none;
+        outline: none;
+        height: $input-button-height;
+        padding: 0 35px;
+        border-radius: 0;
+
+        &:first-child {
+            border-radius: 50px 0 0 50px;
+        }
+
+        &:last-child {
+            border-radius: 0 50px 50px 0;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            color: $color-theme;
+        }
+
+        &.is-active {
+            background: $color-theme;
+            color: #ffffff;
+
+            &:hover {
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+.tm-pricebox {
+    background: #ffffff;
+    transition: $transition;
+
+    &-header {
+        padding: 20px 30px;
+        background: $color-heading;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            @include gradient-bg(a, 90);
+            z-index: -1;
+            opacity: 0;
+            transition: $transition;
+        }
+
+        h4 {
+            margin-bottom: 0;
+            transition: $transition;
+            color: #ffffff;
+        }
+    }
+
+    &-body {
+        border-left: 1px solid #f4f3f3;
+        border-right: 1px solid #f4f3f3;
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+            padding: 15px 30px;
+
+            li {
+                padding: 8px 30px;
+
+                &.disabled {
+                    opacity: 0.5;
+                    text-decoration: line-through;
+                }
+            }
+        }
+    }
+
+    &-price {
+        padding: 25px 30px 20px 30px;
+        border-bottom: 1px solid #f4f3f3;
+        border-left: 1px solid #f4f3f3;
+        border-right: 1px solid #f4f3f3;
+
+        h2 {
+            font-size: 0;
+            font-weight: 700;
+            margin-bottom: 0;
+            line-height: 0.9;
+
+            span {
+                font-size: 48px;
+            }
+        }
+
+        &-time {
+            margin-bottom: 0;
+            color: $color-body;
+            font-family: $ff-heading;
+        }
+    }
+
+    &-footer {
+        border-left: 1px solid #f4f3f3;
+        border-right: 1px solid #f4f3f3;
+        border-top: 1px solid #f4f3f3;
+        padding: 30px 30px;
+    }
+
+    &.is-active,
+    &:hover {
+        box-shadow: $shadow;
+    }
+
+    &.is-active &-header,
+    &:hover &-header {
+        &::before {
+            opacity: 1;
+        }
+
+        h4 {
+            color: #ffffff;
+        }
+    }
+
+    &:hover &-price {
+        h2 {
+            color: $color-theme;
+        }
+    }
+
+    &:hover &-footer {
+        .tm-button {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}

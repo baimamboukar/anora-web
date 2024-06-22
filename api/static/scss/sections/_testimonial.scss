@@ -1,0 +1,165 @@
+/**
+ * Testimonial
+ */
+
+.tm-testimonial-bgshape {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.tm-testimonial {
+
+    &-authors {
+        max-width: 290px;
+        margin: 0 auto;
+        margin-bottom: 22px;
+    }
+
+    &-author {
+        border-radius: 1000px;
+        @include gradient-bg(a, 90);
+        transition: $transition;
+        margin: 18px 0;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+
+        img {
+            border-radius: 1000px;
+        }
+
+        .tm-testimonial-authorinner {
+            transition: $transition;
+            padding: 0;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                background: rgba(#ebebeb, 0.5);
+                transition: $transition;
+                opacity: 1;
+                border-radius: 1000px;
+            }
+        }
+
+        &.slick-center {
+            transform: scale(1.32);
+            z-index: 2;
+        }
+
+        &.slick-center .tm-testimonial-authorinner {
+            padding: 6px;
+
+            &::before {
+                opacity: 0;
+            }
+        }
+    }
+
+    &-contents {
+        .tm-slider-arrow {
+
+            &-prev,
+            &-next {
+                top: 28%;
+            }
+
+            &-prev {
+                left: -100px;
+            }
+
+            &-next {
+                right: -100px;
+            }
+        }
+    }
+
+    &-content {
+        text-align: center;
+
+        P {
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+
+        i {
+            font-size: 100px;
+            color: $color-theme;
+            line-height: 60px;
+            opacity: 0.5;
+            margin-top: 15px;
+
+            @supports (-webkit-background-clip: text) or (background-clip: text) {
+                @include gradient-color(a, 90);
+            }
+
+            @supports (-webkit-text-fill-color: transparent) or (-moz-text-fill-color: transparent) or (-ms-text-fill-color: transparent) or (-o-text-fill-color: transparent) or (text-fill-color: transparent) {
+                @include gradient-color(a, 90);
+            }
+        }
+
+        h4 {
+            margin-bottom: 5px;
+        }
+
+        h6 {
+            font-family: $ff-body;
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+    }
+
+    @media #{$layout-tablet} {
+        &-contents {
+            .tm-slider-arrow {
+
+                &-prev,
+                &-next {
+                    top: 28%;
+                }
+
+                &-prev {
+                    left: -80px;
+                }
+
+                &-next {
+                    right: -80px;
+                }
+            }
+        }
+    }
+
+    @media #{$layout-mobile-lg} {
+        &-contents {
+            padding-bottom: 75px;
+
+            .tm-slider-arrow {
+
+                &-prev,
+                &-next {
+                    top: auto;
+                    bottom: 0;
+                }
+
+                &-prev {
+                    left: auto;
+                    right: calc(50% + 15px);
+                }
+
+                &-next {
+                    right: auto;
+                    left: calc(50% + 15px);
+                }
+            }
+        }
+    }
+}

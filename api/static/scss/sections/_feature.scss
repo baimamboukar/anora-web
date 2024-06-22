@@ -1,0 +1,73 @@
+/**
+ * Feature
+ */
+
+.tm-feature {
+    display: flex;
+
+    &-icon {
+        color: $color-theme;
+        font-size: 50px;
+        flex: 0 0 50px;
+        margin-right: 23px;
+        position: relative;
+
+        @supports (-webkit-background-clip: text) or (background-clip: text) {
+            @include gradient-color(a, 90);
+        }
+
+        @supports (-webkit-text-fill-color: transparent) or (-moz-text-fill-color: transparent) or (-ms-text-fill-color: transparent) or (-o-text-fill-color: transparent) or (text-fill-color: transparent) {
+            @include gradient-color(a, 90);
+        }
+
+        i {
+            vertical-align: middle;
+        }
+
+        svg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            fill: $color-theme;
+            opacity: 0.08;
+            transform-origin: 50% 0;
+            transition: $transition;
+        }
+    }
+
+    &-content {
+        h4 {
+            margin-top: -5px;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    &:hover &-icon {
+        svg {
+            transform: rotate(35deg);
+        }
+    }
+
+    @media #{$layout-tablet} {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+
+        &-icon{
+            margin-bottom: 30px;
+        }
+    }
+
+    @media #{$layout-mobile-lg} {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+
+        &-icon{
+            margin-bottom: 30px;
+        }
+    }
+}

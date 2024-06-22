@@ -1,0 +1,63 @@
+/**
+ * Pagination
+ */
+
+.tm-pagination {
+    ul {
+        padding-left: 0;
+        margin-bottom: 0;
+        font-size: 0;
+        margin-top: -10px;
+
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 18px;
+            margin-top: 10px;
+            margin-right: 10px;
+
+            a {
+                display: inline-block;
+                color: $color-body;
+                font-weight: 700;
+                font-size: 18px;
+                height: 45px;
+                line-height: 43px;
+                border: 1px solid $color-border;
+                text-align: center;
+                min-width: 45px;
+                padding: 0 15px;
+                border-radius: 3px;
+
+                &:hover {
+                    background: $color-theme;
+                    border-color: $color-theme;
+                    color: #ffffff;
+                    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                }
+            }
+
+            &.is-active{
+                a{
+                    background: $color-theme;
+                    border-color: $color-theme;
+                    color: #ffffff; 
+                }
+            }
+        }
+    }
+
+    @media #{$layout-mobile-lg}{
+        ul{
+            li{
+                a{
+                    height: 40px;
+                    line-height: 38px;
+                    padding: 0 10px;
+                    min-width: 40px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

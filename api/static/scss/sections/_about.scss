@@ -1,0 +1,45 @@
+/**
+ * About
+ */
+
+.tm-about {
+    &-bgshape {
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        right: 0;
+        z-index: -1;
+    }
+
+    &-image {
+        img{
+            width: 100%;
+            animation: autoAnimated 10s linear 0s infinite both;
+        }
+    }
+
+    &-content {
+        ul{
+            text-align: left;
+        }
+        .tm-button {
+            margin-top: 25px;
+        }
+    }
+
+    @media #{$layout-tablet} {
+        &-image {
+            margin: 85px;
+            margin-bottom: 50px;
+        }
+    }
+
+    @media #{$layout-mobile-lg} {
+        &-image {
+            margin-bottom: 40px;
+        }
+    }
+}

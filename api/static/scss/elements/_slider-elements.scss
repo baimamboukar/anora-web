@@ -1,0 +1,73 @@
+/**
+ * Slider Elements
+ */
+
+.tm-slider-arrow {
+    position: relative;
+
+    &-prev,
+    &-next {
+        background: #ffffff;
+        height: 46px;
+        width: 46px;
+        line-height: 1;
+        padding: 7px;
+        display: inline-block;
+        vertical-align: middle;
+        border: 0;
+        border-radius: 100px;
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        margin-top: -23px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            @include gradient-bg(a, 0);
+            transform: scale(1.4);
+            border-radius: 100px;
+            opacity: 0.5;
+            animation: growShrink 2s ease-in-out 0s infinite both;
+            z-index: -2;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background: #ffffff;
+            z-index: -1;
+            border-radius: 100px;
+        }
+
+        i {
+            height: 32px;
+            width: 32px;
+            line-height: 32px;
+            text-align: center;
+            border-radius: 100px;
+            @include gradient-bg(a, 0);
+            color: #ffffff;
+            font-size: 24px;
+            vertical-align: middle;
+        }
+    }
+
+    &-prev {
+        left: 0;
+        right: auto;
+    }
+
+    &-next {
+        left: auto;
+        right: 0;
+    }
+}

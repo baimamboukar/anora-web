@@ -1,0 +1,186 @@
+/**
+ * Funfact
+ */
+
+.tm-video-funfact-area {
+    .tm-videobox {
+        margin-right: 45px;
+        margin-left: -140px;
+    }
+
+    @media #{$layout-laptop-lg} {
+        .tm-videobox {
+            margin-right: 45px;
+            margin-left: -85px;
+        }
+    }
+
+    @media #{$layout-laptop} {
+        .tm-videobox {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+
+    @media #{$layout-notebook} {
+        .tm-videobox {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+
+    @media #{$layout-tablet} {
+        .tm-videobox {
+            margin-right: 50px;
+            margin-left: 50px;
+        }
+    }
+
+    @media #{$layout-mobile-lg} {
+        .tm-videobox {
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+    }
+
+    @media #{$layout-mobile-sm} {
+        .tm-videobox {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+}
+
+.tm-video-funfact-bgshape {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: auto;
+}
+
+.tm-funfact-wrapper {
+    margin-top: -30px;
+
+    .tm-funfact-masonryitem {
+        .tm-funfact {
+            margin-top: 30px;
+        }
+
+        &:nth-child(2) {
+            .tm-funfact {
+                margin-top: 80px;
+            }
+        }
+    }
+
+    @media #{$layout-tablet}{
+        margin-top: 20px;
+    }
+
+    @media #{$layout-mobile-lg}{
+        margin-top: 20px;
+    }
+
+    @media #{$layout-mobile-sm}{
+        .tm-funfact-masonryitem {
+            &:nth-child(2) {
+                .tm-funfact {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+.tm-funfact {
+    box-shadow: $shadow;
+    background: $color-grey;
+    padding: 10px;
+    padding: 45px 0;
+    border: 10px solid #ffffff;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        @include gradient-bg(a, 0);
+        opacity: 0;
+        transition: $transition;
+        z-index: -1;
+    }
+
+    &-icon {
+        color: $color-theme;
+        font-size: 70px;
+        display: inline-block;
+        margin-bottom: 20px;
+        line-height: 1;
+
+        i {
+            line-height: 1;
+            vertical-align: middle;
+        }
+
+        @supports (-webkit-background-clip: text) or (background-clip: text) {
+            @include gradient-color(a, 90);
+        }
+
+        @supports (-webkit-text-fill-color: transparent) or (-moz-text-fill-color: transparent) or (-ms-text-fill-color: transparent) or (-o-text-fill-color: transparent) or (text-fill-color: transparent) {
+            @include gradient-color(a, 90);
+        }
+    }
+
+    &-content {
+        .tm-funfact-number {
+            color: $color-theme;
+            font-weight: 700;
+            font-family: $ff-body;
+            font-size: 36px;
+            line-height: 46px;
+            margin-bottom: 5px;
+            display: inline-block;
+            height: 50px;
+            vertical-align: middle;
+            transition: $transition;
+
+            .odometer {
+                font-weight: 700;
+                font-family: $ff-body;
+                font-size: 36px;
+                line-height: 46px;
+
+                .odometer-formatting-mark {
+                    display: none;
+                }
+
+                .odometer-digit {
+                    vertical-align: baseline;
+                }
+            }
+        }
+
+        h4 {
+            color: $color-heading;
+            margin-bottom: 0;
+            transition: $transition;
+        }
+    }
+
+    @media #{$layout-notebook} {
+        &-icon{
+            font-size: 55px;
+        }
+        &-content {
+            h4 {
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+    }
+}

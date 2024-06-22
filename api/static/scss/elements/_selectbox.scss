@@ -1,0 +1,74 @@
+/**
+ * Selectbox
+ */
+
+.nice-select {
+    height: 50px;
+    border-radius: 3px;
+    line-height: 48px;
+    padding: 0 15px;
+    padding-right: 35px;
+    width: 100%;
+    background-color: transparent;
+
+    &::after {
+        content: "";
+        position: absolute;
+        border: 0;
+        background-image: url(../images/icons/down-caret.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: scroll;
+        background-size: contain;
+        transform: rotate(0deg);
+        transform-origin: center center;
+        height: 9px;
+        width: 9px;
+        line-height: 1;
+        text-align: center;
+    }
+
+    .current {
+        display: block;
+        padding: 0;
+        color: lighten($color-body, 20);
+    }
+
+    .list {
+        border-radius: 0;
+        margin-bottom: 0;
+        min-width: 180px;
+        width: 100%;
+        margin-top: 1px;
+
+        .option {
+            padding: 0 15px;
+            min-height: auto;
+            line-height: 30px;
+
+            &:hover {
+                background: $color-theme;
+                color: #ffffff;
+            }
+        }
+    }
+
+    &:focus {
+        background: rgba($color-theme, 0.05);
+        border-color: rgba($color-theme, 0.05);
+        color: $color-body;
+    }
+
+    &.open {
+        background: rgba($color-theme, 0.05);
+        border-color: rgba($color-theme, 0.05);
+
+        .current{
+            color: $color-body;
+        }
+
+        &:after {
+            transform: rotate(180deg);
+        }
+    }
+}

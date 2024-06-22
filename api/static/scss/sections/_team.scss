@@ -1,0 +1,195 @@
+/**
+ * Team Area
+ */
+
+.tm-team {
+    &-areabgshape {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        text-align: right;
+    }
+
+    &-slider {
+        .tm-slider-arrow {
+            &-prev {
+                left: -60px;
+            }
+
+            &-next {
+                right: -60px;
+            }
+        }
+    }
+
+    &-top {
+        display: inline-block;
+        height: 250px;
+        width: 250px;
+        border-radius: 1000px;
+        position: relative;
+    }
+
+    &-image {
+        display: inline-block;
+        overflow: hidden;
+        border-radius: 1000px;
+        padding: 10px;
+        vertical-align: middle;
+        transition: $transition;
+        @include gradient-bg(a, 0);
+    }
+
+    &-imageinner {
+        display: inline-block;
+        overflow: hidden;
+        border-radius: 1000px;
+        vertical-align: middle;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            height: calc(100% - 20px);
+            width: calc(100% - 20px);
+            @include gradient-bg(a, 270);
+            border-radius: 1000px;
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(0.5);
+            transition: $transition;
+        }
+    }
+
+    &-socialtrigger {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        font-size: 24px;
+        color: #ffffff;
+        padding: 0;
+        display: inline-block;
+        height: 46px;
+        width: 46px;
+        line-height: 1;
+        text-align: center;
+        @include gradient-bg(a, 0);
+        border: 0;
+        border-radius: 100px;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+
+        i {
+            display: inline-block;
+            height: 38px;
+            width: 38px;
+            line-height: 38px;
+            border-radius: 100px;
+            background: transparent;
+            color: #ffffff;
+            transition: $transition;
+        }
+    }
+
+    &-socialicons {
+        margin-bottom: 0;
+        padding: 0 10px;
+        position: absolute;
+        width: 100%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 0;
+        z-index: 1;
+        text-align: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: $transition;
+
+        li {
+            display: inline-block;
+            font-size: 24px;
+            margin: 0;
+            vertical-align: middle;
+            transition: $transition;
+
+            a {
+                color: #ffffff;
+            }
+        }
+    }
+
+    &-content {
+        margin-top: 25px;
+
+        h6 {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: $color-body;
+        }
+
+        h4 {
+            margin-bottom: 0;
+        }
+    }
+
+    &:hover &-image {
+        padding: 0;
+    }
+
+    &:hover &-imageinner {
+        &::before {
+            opacity: 0.8;
+            visibility: visible;
+            transform: scale(1);
+        }
+    }
+
+    &:hover &-socialtrigger {
+        i {
+            background: #fff;
+            color: $color-theme;
+        }
+    }
+
+    &:hover &-socialicons {
+        visibility: visible;
+        opacity: 1;
+
+        li {
+            margin: 0 10px;
+        }
+    }
+
+    @media only screen and (max-width: 1350px) {
+        &-slider {
+            &.tm-slider-arrow {
+                padding-bottom: 75px;
+            }
+
+            .tm-slider-arrow {
+
+                &-prev,
+                &-next {
+                    top: auto;
+                    bottom: 0;
+                }
+
+                &-prev {
+                    left: auto;
+                    right: calc(50% + 15px);
+                }
+
+                &-next {
+                    left: calc(50% + 15px);
+                    right: auto;
+                }
+            }
+        }
+    }
+}

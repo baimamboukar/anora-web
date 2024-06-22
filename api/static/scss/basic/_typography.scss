@@ -1,0 +1,408 @@
+/**
+ * Typography
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-size: $fz-body;
+    line-height: $lh-body;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: $ff-body;
+    color: $color-body;
+    font-weight: 400;
+}
+
+@include placeholder-color($color-body);
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+address,
+p,
+pre,
+blockquote,
+dl,
+dd,
+menu,
+ol,
+ul,
+table,
+caption,
+hr {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: $ff-heading;
+    color: $color-heading;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+    font-weight: 500;
+}
+
+h5,
+.h5,
+h6,
+.h6 {
+    font-weight: 400;
+}
+
+h1,
+.h1 {
+    font-size: $fz-heading-1;
+    line-height: $fz-heading-1 + 10px;
+}
+
+h2,
+.h2 {
+    font-size: $fz-heading-2;
+    line-height: $fz-heading-2 + 10px;
+}
+
+h3,
+.h3 {
+    font-size: $fz-heading-3;
+    line-height: $fz-heading-3 + 10px;
+}
+
+h4,
+.h4 {
+    font-size: $fz-heading-4;
+    line-height: $fz-heading-4 + 10px;
+}
+
+h5,
+.h5 {
+    font-size: $fz-heading-5;
+    line-height: $fz-heading-5 + 10px;
+}
+
+h6,
+.h6 {
+    font-size: $fz-heading-6;
+    line-height: $fz-heading-6 + 10px;
+}
+
+@media #{$layout-tablet} {
+
+    h1,
+    .h1 {
+        font-size: $fz-heading-1 - 8;
+        line-height: ($fz-heading-1 - 8) + 10px;
+    }
+
+    h2,
+    .h2 {
+        font-size: $fz-heading-2 - 4;
+        line-height: ($fz-heading-2 - 4) + 10px;
+    }
+
+    h3,
+    .h3 {
+        font-size: $fz-heading-3 - 2;
+        line-height: ($fz-heading-3 - 2) + 10px;
+    }
+}
+
+@media #{$layout-mobile-lg} {
+
+    h1,
+    .h1 {
+        font-size: $fz-heading-1 - 10;
+        line-height: ($fz-heading-1 - 10) + 10px;
+    }
+
+    h2,
+    .h2 {
+        font-size: $fz-heading-2 - 8;
+        line-height: ($fz-heading-2 - 8) + 10px;
+    }
+
+    h3,
+    .h3 {
+        font-size: $fz-heading-3 - 4;
+        line-height: ($fz-heading-3 - 4) + 10px;
+    }
+
+    h4,
+    .h4 {
+        font-size: $fz-heading-4 - 2;
+        line-height: ($fz-heading-4 - 2) + 10px;
+    }
+}
+
+@media #{$layout-mobile-sm} {
+
+    h1,
+    .h1 {
+        font-size: $fz-heading-1 - 13;
+        line-height: ($fz-heading-1 - 13) + 10px;
+    }
+
+    h2,
+    .h2 {
+        font-size: $fz-heading-2 - 10;
+        line-height: ($fz-heading-2 - 10) + 10px;
+    }
+}
+
+::-moz-selection {
+    background: $color-theme;
+    color: #ffffff;
+}
+
+::-ms-selection {
+    background: $color-theme;
+    color: #ffffff;
+}
+
+::-o-selection {
+    background: $color-theme;
+    color: #ffffff;
+}
+
+::selection {
+    background: $color-theme;
+    color: #ffffff;
+}
+
+
+*:-webkit-autofill,
+*:-webkit-autofill:hover,
+*:-webkit-autofill:focus,
+*:-webkit-autofill:active {
+    transition: background-color 50000s ease-in-out 0s;
+}
+
+a {
+    transition: all 0.3s ease-in-out 0s;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;
+        outline: none;
+    }
+
+    &:visited {
+        color: inherit;
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+input,
+button,
+select,
+textarea {
+    background: transparent;
+    border: 1px solid $color-border;
+    transition: all 0.4s ease-out 0s;
+    color: $color-body;
+    font-family: $ff-body;
+    border-radius: 3px;
+    @include placeholder-color(lighten($color-body, 20));
+
+    &:focus,
+    &:active {
+        outline: none;
+        border-color: $color-theme;
+    }
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    font-size: 14px;
+    vertical-align: middle;
+
+    &:focus {
+        background: rgba($color-theme, 0.08);
+        border-color: rgba($color-theme, 0.2);
+    }
+}
+
+input,
+select,
+button {
+    height: $input-button-height;
+    padding: 0 15px;
+
+    @media #{$layout-mobile-lg} {
+        height: 44px;
+    }
+}
+
+textarea {
+    padding: 10px 15px;
+}
+
+blockquote {
+    border-left: 5px solid $color-theme;
+    font-size: 18px;
+    line-height: 27px;
+    padding: 30px 30px 15px 30px;
+    position: relative;
+    z-index: 1;
+    font-style: italic;
+    background: $color-grey;
+
+    footer {
+        font-size: 14px;
+
+        a {
+            color: $color-theme;
+
+            &:hover {
+                color: $color-theme;
+            }
+        }
+    }
+
+    @media #{$layout-mobile-lg} {
+        font-size: 16px;
+        line-height: 25px;
+        padding: 20px;
+    }
+}
+
+[class^="flaticon-"],
+[class*=" flaticon-"],
+[class^="flaticon-"],
+[class*=" flaticon-"] {
+    line-height: 1;
+
+    &::before,
+    &::after {
+        margin-left: 0;
+        font-size: inherit;
+        vertical-align: middle;
+    }
+}
+
+.stylish-list {
+    padding-left: 0;
+
+    li {
+        list-style: none;
+        line-height: 30px;
+        position: relative;
+        padding-left: 30px;
+    }
+
+    i {
+        position: absolute;
+        left: 0;
+        top: 7px;
+        font-size: 16px;
+        color: $color-theme;
+    }
+}
+
+
+
+/* Checkbox & Radio Styles */
+input[type=checkbox],
+input[type=radio] {
+    visibility: hidden;
+    opacity: 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 0;
+    display: none;
+
+    &~label {
+        position: relative;
+        padding-left: 24px;
+        cursor: pointer;
+
+        &:before {
+            content: "";
+            font-family: 'fontAwesome';
+            font-weight: 700;
+            position: absolute;
+            left: 0;
+            top: 5px;
+            border: 1px solid $color-border;
+            height: 15px;
+            width: 15px;
+            line-height: 1;
+            font-size: 13px;
+        }
+    }
+
+    &:checked {
+        &~label {
+            color: $color-theme;
+
+            &:before {
+                content: "\f00c";
+                color: $color-theme;
+                border-color: $color-theme;
+            }
+        }
+    }
+}
+
+input[type=radio] {
+    &~label {
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            border: 2px solid $color-border;
+            border-radius: 100px;
+            height: 15px;
+            width: 15px;
+            margin-top: -8px;
+            line-height: .5;
+            font-size: 28px
+        }
+    }
+
+    &:checked {
+        &~label {
+            &::before {
+                content: "";
+                color: $color-theme;
+                border-color: $color-theme
+            }
+        }
+    }
+}
