@@ -6,6 +6,53 @@
 
   <body class="inner-pg">
     <h1>Invitation</h1>
+
     {{invite}} {% include "includes/js-includes.html" %}
+
+    <script type="js">
+                function isAndroidAndAnoraInstalled() {
+          // Check if the user agent indicates an Android device
+          var isAndroid = /Android/i.test(navigator.userAgent);
+
+          if (!isAndroid) {
+              alert('Youre not running on an Android device.');
+              return;
+          }
+
+          // Function to check if the Anora app is installed
+          function checkAnoraInstalled(callback) {
+              var timeout;
+              var iframe = document.createElement('iframe');
+              iframe.style.display = 'none';
+              iframe.src = 'intent://org.xenora.anora#Intent;scheme=http;package=org.xenora.anora;end';
+
+              document.body.appendChild(iframe);
+
+              // Timeout to check if the app is installed
+              timeout = setTimeout(function() {
+                  document.body.removeChild(iframe);
+                  callback(false); // App is not installed
+              }, 2000);
+
+              window.onblur = function() {
+                  clearTimeout(timeout);
+                  callback(true); // App is installed
+              };
+          }
+
+          // Execute the check
+          checkAnoraInstalled(function(isInstalled) {
+              if (isInstalled) {
+                  alert('Anora app is installed.');
+              } else {
+                  alert('Anora app is not installed.');
+                  window.location.href = 'https://anora.baimamboukar.dev';
+              }
+          });
+      }
+
+      // Usage
+      isAndroidAndAnoraInstalled();
+    </script>
   </body>
 </html>

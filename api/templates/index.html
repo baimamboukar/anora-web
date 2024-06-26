@@ -102,12 +102,14 @@
                   </p>
                   <div class="tm-buttongroup">
                     <a
-                      href="https://play.google.com/store/apps/details?id=org.xenora.anora"
+                      href="https://mega.nz/file/dSdH0YTb#VsC_IjJ9FmHzKBFAw2RkfmHCsvSW0muia33ECz4wssM"
+                      target="_blank"
                       class="tm-button tm-button-lg tm-button-white tm-button-transparent"
                       ><i class="zmdi zmdi-android"></i
                       ><span>Google Play</span></a
                     >
                     <a
+                      id="ios"
                       href="#"
                       class="tm-button tm-button-lg tm-button-white tm-button-transparent"
                       ><i class="zmdi zmdi-apple"></i
@@ -1059,6 +1061,15 @@
     <script src="{{ url_for('static', filename='js/chart.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/chartactive.js') }}"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <script>
+      let ios = document.getElementById("ios");
+      ios.addEventListener("click", () => {
+        alert(
+          "Anora is not yet available on the App Store. Please check back later 😘."
+        );
+      });
+    </script>
 
     <!--// Js Files -->
   </body>
